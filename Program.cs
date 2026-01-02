@@ -5,11 +5,7 @@ class Program
     static void Main()
     {
         bool ATMloop = true;
-        Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine($"Dil Seçiniz TR | Selec Language EN");
-        Console.ResetColor();
-        string Sdil = Console.ReadLine() ?? "TR";
-        Bankamatik YeniHesap = new Bankamatik("Kürşat" Sdil);
+        Bankamatik YeniHesap = new Bankamatik("Kürşat");
         while (ATMloop)
         {
 
@@ -45,17 +41,14 @@ class Program
 
     class Bankamatik
     {
-        string dil ; 
         double miktar;
         public string? HesapSahibi;
         public double Bakiye = 500;
 
 
-        public Bankamatik(string Gelenİsim, string Gelendil)
+        public Bankamatik(string Gelenİsim)
         {
             HesapSahibi = Gelenİsim;
-            dil = Gelendil.ToUpper();
-
         }
 
         public void ParaYatır()
@@ -89,10 +82,6 @@ class Program
             Console.WriteLine($"Sayın {HesapSahibi} Hesabınızdaki Para: {Bakiye}");
         }
 
-        public void lang()
-        {
-            
-        }
     }
 
 
